@@ -36,7 +36,7 @@ class Dog(db.Model):
     breed = db.Column(db.String(200), nullable=False)
     color = db.Column(db.String(200), nullable=False)
     birthday = db.Column(db.DateTime, nullable=True)
-    dietary_info = db.Column(db.Text(length=999), nullable=True)
+    dietary_info = db.Column(db.String(length=999), nullable=True)
     datetime_created = db.Column(db.Datetime, default=datetime.now())
 
     def __init__(self, user_id, name, breed, color, birthday, dietary_info):
